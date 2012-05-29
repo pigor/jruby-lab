@@ -8,6 +8,7 @@ Wiki do JRuby com o caminho para iniciar os estudos com JRuby - https://github.c
 Parte do Wiki destinada ao JRuby on Rails - https://github.com/jruby/jruby/wiki/JRubyOnRails
 Artigo sobre o que é preciso para programar em JRuby - https://blogs.oracle.com/coolstuff/entry/jruby_what_i_need_to
 Referência mostrando a conversão de classe Ruby para uma classe Java - https://gist.github.com/390342
+Artigo sobre a JSR-292 e o Invokedynamic - http://www.infoq.com/br/articles/invokedynamic
 
 Apresentações
 -------------
