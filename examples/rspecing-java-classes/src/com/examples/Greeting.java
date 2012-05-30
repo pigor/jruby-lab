@@ -29,7 +29,6 @@ public class Greeting{
 	}
 
 	public String sayHello(){
-		new SimpleDateFormat("dd/MM/yyyy");
 		String hello = "Hello, " + this.name;
 		hello += ". Your email: " + this.email;
 		hello += ". Date: " + new SimpleDateFormat("dd/MM/yyyy").format(new Date());
