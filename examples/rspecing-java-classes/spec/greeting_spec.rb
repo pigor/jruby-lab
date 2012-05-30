@@ -11,8 +11,8 @@ describe Greeting do
   end
 
   it "should say hello to Piguera" do
-    greeting.set_name "Piguera"
-    greeting.set_email "pigor@idopter.com"
+    greeting.name = "Piguera"
+    greeting.email = "pigor@idopter.com"
     greeting.say_hello.should == "Hello, Piguera. Your email: pigor@idopter.com. Date: #{date}"
   end
 end
