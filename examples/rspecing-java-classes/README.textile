@@ -1,4 +1,9 @@
+h2. SETUP
+
+<pre><code>rvm install jruby
+rvm use jruby
+gem install rspec</code></pre>
+
 h2. TESTING
 
-<pre><code>javac -d build src/com/examples/Greeting.java
-jruby -J-cp build -S spec/greeting_spec.rb</code></pre>
+<pre><code> jruby -S rspec spec/greeting_spec.rb</code></pre>

@@ -1,6 +1,6 @@
 require "java"
 
-java_import "com.examples.Greeting"
+java_import "Greeting"
 
 describe Greeting do
   let(:greeting){ Greeting.new "Mateus Linhares", "mateus@idopter.com" }
