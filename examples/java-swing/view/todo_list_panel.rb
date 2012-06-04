@@ -14,8 +14,8 @@ class TodoListPanel < JPanel
 		self.set_background Color::WHITE
 		self.set_alignment_x Component::CENTER_ALIGNMENT
 	end
-	
-	def addToDo(panel)
+
+	def add_todo(panel)
     self.add panel
 	end
 end

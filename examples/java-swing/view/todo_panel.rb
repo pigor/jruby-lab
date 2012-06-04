@@ -14,74 +14,74 @@ java_import javax.swing.JPanel
 java_import javax.swing.JTextArea
 
 class TodoPanel < JPanel
-	
+
 	attr_accessor :ticket
-	
+
 	def initialize ticket
     super
-	  
-		@ticket = ticket
-		
-    self.setLayout BorderLayout.new
-    self.setBackground Color::WHITE
-    self.setBorder BorderFactory.createLineBorder(Color::GRAY)
 
-    @gridBagLayout = GridBagLayout.new
+		@ticket = ticket
+
+    self.set_layout BorderLayout.new
+    self.set_background Color::WHITE
+    self.set_border BorderFactory.createLineBorder(Color::GRAY)
+
+    @grid_bag_layout = GridBagLayout.new
     @constraints = GridBagConstraints.new
 
 		@content = JPanel.new
-		@content.setLayout @gridBagLayout
-		
-    buildComponent
+		@content.set_layout @grid_bag_layout
+
+    build_component
 	end
-	
-  def addMessage
+
+  def add_message
     message = JTextArea.new
-    message.setEditable(false);  
-    message.setLineWrap(true);  
-    message.setWrapStyleWord(true);  
-    message.setFont(Font.new("SansSerif", Font::PLAIN, 12));
-    message.setText(@ticket.message);
-    
+    message.set_editable false
+    message.set_line_wrap true
+    message.set_wrap_style_word true
+    message.set_font Font.new("SansSerif", Font::PLAIN, 12)
+    message.set_text @ticket.message
+
     @constraints.gridx = 0;
     @constraints.gridy = 1;
     @constraints.gridwidth = GridBagConstraints::REMAINDER;
     @constraints.anchor = GridBagConstraints::SOUTHWEST;
-    @content.add(message, @constraints);
+    @content.add message, @constraints
   end
-  
-  def addSignature
-    usernameLabel = JLabel.new(@ticket.username);
-    usernameLabel.setFont(Font.new("SansSerif", Font::BOLD, 12));
-    
-    @constraints.gridx = 0;
-    @constraints.gridy = 0;
-    @constraints.weightx = 1.0;
-    @constraints.anchor = GridBagConstraints::WEST;
-    @content.add(usernameLabel, @constraints);
+
+  def add_signature
+    username_label = JLabel.new(@ticket.username)
+    username_label.set_font Font.new("SansSerif", Font::BOLD, 12)
+
+    @constraints.gridx = 0
+    @constraints.gridy = 0
+    @constraints.weightx = 1.0
+    @constraints.anchor = GridBagConstraints::WEST
+    @content.add username_label, @constraints
   end
-  
-  def addEventDate
-    dateLabel = JLabel.new(@ticket.show_time);
-    dateLabel.setFont(Font.new("SansSerif", Font::PLAIN, 10));
-    dateLabel.setForeground(Color::GRAY);
-    
-    @constraints.gridx = 1;
-    @constraints.gridy = 0;
-    @constraints.weightx = 0.0;
-    @constraints.anchor = GridBagConstraints::EAST;
-    @content.add(dateLabel, @constraints);
+
+  def add_event_date
+    date_label = JLabel.new(@ticket.show_time);
+    date_label.set_font Font.new("SansSerif", Font::PLAIN, 10)
+    date_label.set_foreground Color::GRAY
+
+    @constraints.gridx = 1
+    @constraints.gridy = 0
+    @constraints.weightx = 0.0
+    @constraints.anchor = GridBagConstraints::EAST
+    @content.add date_label, @constraints
   end
-  
-  def buildComponent
+
+  def build_component
     @constraints.fill = GridBagConstraints::BOTH;
-    
-    addSignature
-    addEventDate
-    addMessage
-    
+
+    add_signature
+    add_event_date
+    add_message
+
     checked = @ticket.status == TodoTicket::STATUS_TYPES[:done] ? true : false
-    
+
     self.add @content, BorderLayout::CENTER
     self.add JCheckBox.new("", checked), BorderLayout::EAST
   end

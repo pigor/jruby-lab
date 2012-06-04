@@ -5,10 +5,10 @@ require 'view/todo_list_panel'
 
 frame = MainFrame.new
 
-frame.list.addToDo TodoPanel.new(TodoTicket.new("Teste Teste Teste Teste Teste Teste Teste Teste Teste", "pigor", TodoTicket::STATUS_TYPES[:required]))
-frame.list.addToDo TodoPanel.new(TodoTicket.new("Teste1", "pigor", TodoTicket::STATUS_TYPES[:required]))
-frame.list.addToDo TodoPanel.new(TodoTicket.new("Teste2", "pigor", TodoTicket::STATUS_TYPES[:required]))
-frame.list.addToDo TodoPanel.new(TodoTicket.new("Teste3", "pigor", TodoTicket::STATUS_TYPES[:done]))
+frame.list.add_todo TodoPanel.new(TodoTicket.new("Teste Teste Teste Teste Teste Teste Teste Teste Teste", "pigor", TodoTicket::STATUS_TYPES[:required]))
+frame.list.add_todo TodoPanel.new(TodoTicket.new("Teste1", "pigor", TodoTicket::STATUS_TYPES[:required]))
+frame.list.add_todo TodoPanel.new(TodoTicket.new("Teste2", "pigor", TodoTicket::STATUS_TYPES[:required]))
+frame.list.add_todo TodoPanel.new(TodoTicket.new("Teste3", "pigor", TodoTicket::STATUS_TYPES[:done]))
 
 frame.pack
-frame.setVisible true
+frame.set_visible true
