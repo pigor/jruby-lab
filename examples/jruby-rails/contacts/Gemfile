@@ -1,0 +1,15 @@
+source 'https://rubygems.org'
+
+gem 'rails', '3.2.3'
+
+if defined?(JRUBY_VERSION)
+  gem 'activerecord-jdbc-adapter'
+  gem 'activerecord-jdbcmysql-adapter'
+  gem 'jdbc-mysql'
+  gem 'jruby-openssl'
+  gem 'trinidad'
+else
+  gem 'mysql2'
+end
+
+gem 'jquery-rails'
