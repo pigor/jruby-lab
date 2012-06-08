@@ -1,11 +1,19 @@
 require 'java'
 
-frame = javax.swing.JFrame.new("Window")
-label = javax.swing.JLabel.new("Hello")
+java_import java.awt.FlowLayout
+java_import javax.swing.JFrame
+java_import javax.swing.JLabel
+java_import java.awt.Dimension
 
-frame.setLayout(java.awt.FlowLayout.new(java.awt.FlowLayout::CENTER))
-frame.getContentPane.add(label)
-frame.setDefaultCloseOperation(javax.swing.JFrame::EXIT_ON_CLOSE)
-frame.setMinimumSize(java.awt.Dimension.new(200,200))
+
+frame = JFrame.new("Window")
+label = JLabel.new("Hello")
+
+frame.set_layout FlowLayout.new(FlowLayout::CENTER)
+frame.default_close_operation = JFrame::EXIT_ON_CLOSE
+frame.minimum_size = Dimension.new 200, 200
+
+frame.content_pane.add label
+
 frame.pack
-frame.setVisible(true)
+frame.visible = true
