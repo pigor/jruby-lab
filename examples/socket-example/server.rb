@@ -3,8 +3,6 @@ require 'java'
 require 'java_socket'
 require 'client_jruby'
 
-# include_class Java::Client
-
 class Server
   
 	def initialize
@@ -19,7 +17,6 @@ class Server
 				
 				Thread.new do
 				  ClientJRuby.new(socket).run
-          # Client.new(socket).run
 			  end
 			end
 			 
