@@ -2,6 +2,7 @@
 desc 'Compiles and runs specs'
 task :compile_and_spec do
   system('javac *.java')
+  system('jruby -S test/*')
   system('jruby -S rspec spec/*')
 end
 
