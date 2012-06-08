@@ -1,9 +1,14 @@
 h2. SETUP
 
-<pre><code>rvm install jruby
+<pre><code>
+rvm install jruby
 rvm use jruby
-gem install rspec</code></pre>
+gem install test-unit
+gem install rspec
+</code></pre>
 
 h2. TESTING
 
-<pre><code> jruby -S rake</code></pre>
+<pre><code>
+jruby -S rake
+</code></pre>
