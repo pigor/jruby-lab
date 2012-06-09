@@ -6,10 +6,10 @@ java_import javax.swing.JLabel
 java_import java.awt.Dimension
 
 
-frame = JFrame.new("Window")
-label = JLabel.new("Hello")
+frame = JFrame.new "Title"
+label = JLabel.new "Hello World Swing!"
 
-frame.set_layout FlowLayout.new(FlowLayout::CENTER)
+frame.layout = FlowLayout.new(FlowLayout::CENTER)
 frame.default_close_operation = JFrame::EXIT_ON_CLOSE
 frame.minimum_size = Dimension.new 200, 200
 

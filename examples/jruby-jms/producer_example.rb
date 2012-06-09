@@ -14,6 +14,6 @@ config = {
 
 JMS::Connection.session(config) do |session|
   session.producer(:queue_name => 'ExampleQueue') do |producer|
-    producer.send(session.message("Hello JRuby"))
+    producer.send(session.message("JRuby no Ta Safo Conf!!!"))
   end
 end
