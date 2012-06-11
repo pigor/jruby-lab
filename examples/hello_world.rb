@@ -2,8 +2,8 @@ require 'java'
 
 java_import java.lang.System
 
-puts 'Hello World Ruby!'
+puts "Hello Ruby!"
 
-System.out.println("Hello World Java!");
+System.out.println("Hello Java!")
 
-System.out.println "Hello World JRuby!"
+System.out.println "Hello JRuby!"
