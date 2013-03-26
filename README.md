@@ -1,7 +1,7 @@
 JRuby-Lab
 =========
 
-JRuby's lab is a repository the jruby's content. With examples and references.
+JRuby's lab é um repositório com exemplos e referências de JRuby.
 
 Principal site de divulgação do JRuby - http://www.jruby.org/
 
