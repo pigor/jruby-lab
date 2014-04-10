@@ -33,4 +33,9 @@ public class Greeting{
 
 		return hello;
 	}
+
+	public static void main(String args[]){
+	  Greeting g = new Greeting("FISL", "fisl@fisl.com.br");
+	  System.out.println(g.sayHello());
+  }
 }
