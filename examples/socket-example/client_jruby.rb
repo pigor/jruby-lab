@@ -4,7 +4,7 @@ require 'java_socket'
 
 class ClientJRuby
   include JavaSocket::Runnable
-	
+
 	def initialize(socket)
 		puts "Cliente inicializado..."
 		@socket = socket
@@ -22,7 +22,7 @@ class ClientJRuby
 				output.println "Eu: #{message}"
 				output.flush
 				
-				if input.has_next()
+				if input.has_next
 				  puts "#{input.next_line}"
 			  end
 			end

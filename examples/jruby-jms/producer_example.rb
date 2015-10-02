@@ -1,4 +1,3 @@
-require 'rubygems'
 require 'jms'
 
 # Connect to ActiveMQ

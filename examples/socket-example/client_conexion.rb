@@ -1,9 +1,7 @@
 #coding: utf-8
 require 'java'
 require 'java_socket'
-#require 'client_jruby'
-
-include_class Java::Client
+require 'client_jruby'
 
 class ClientConexion
 
@@ -13,10 +11,10 @@ class ClientConexion
 
 			puts "Conectando..."
 
-			chat = Client.new(socket)
-			Thread.new do
-        chat
-		  end
+			client = ClientJRuby.new(socket)
+			Thread.new(client) do |chat|
+			  chat.run
+      end
 
   	rescue Exception => e
 			puts "Ocorreu um erro #{e}"
